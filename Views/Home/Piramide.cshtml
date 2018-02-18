@@ -1,13 +1,24 @@
 ﻿@model int
 
-
-
+@{int re = Model - 1;}
+@{int dif = Model - re;}
     @for (int i = 0 ; i < Model ; i++)
     {
-         <img  src="~/images/bloque.webp" alt="#">
+        @for (int b = re; b > 0; b--)
+        {
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        }
+        @for (int h = 0; h < dif; h++)
+        {
+            <img  src="~/images/bloque.webp" alt="#">
+        }
+        re --;
+        dif++;
+        <br/>
     }
-
+    
     <br/>
+
 
 
            
